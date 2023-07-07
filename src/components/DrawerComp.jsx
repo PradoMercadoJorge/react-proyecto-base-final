@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Drawer from '@mui/material/Drawer';
+import Drawer from '@material-ui/core/Drawer';
 import { ListItemIcon, ListItemText, IconButton, List } from '@material-ui/core';
-import { ListItemButton } from '@mui/material';
 import MenuIcon from '@material-ui/icons/Menu';
 const pages = ['HOME', 'ABOUT', 'CONTACT', 'LOGIN'];
 
@@ -12,11 +11,11 @@ const DrawerComp = () => {
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
           {pages.map((page, index) => (
-            <ListItemButton key={index}>
-              <ListItemIcon>
-                <ListItemText>{page}</ListItemText>
-              </ListItemIcon>
-            </ListItemButton>
+            // <ListItemButton key={index}>
+            <ListItemIcon key={index}>
+              <ListItemText>{page}</ListItemText>
+            </ListItemIcon>
+            // </ListItemButton>
           ))}
         </List>
       </Drawer>
